@@ -1,0 +1,146 @@
+
+/* 1. Style the entire webpage */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 40px;
+}
+
+/* 2. Style the main application container */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. Style the main heading */
+h1 {
+    text-align: center;
+    color: #333333;
+}
+
+/* 4. Arrange the input and button */
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+/* 5. Style the task input field */
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 6. Style the Add Task button */
+#addTaskBtn {
+    padding: 10px 15px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 7. Change button color when the mouse hovers over it */
+#addTaskBtn:hover {
+    background-color: #1d4ed8;
+}
+
+/* 8. Style the task counter */
+#taskCounter {
+    color: #666666;
+    margin-top: 20px;
+}
+
+/* 9. Remove default list styling */
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+/* Style completed tasks */
+.completed {
+    text-decoration: line-through;
+    color: #6b7280;
+    opacity: 0.6;
+}
+
+#taskList li:has(.completed) {
+    background-color: #e5e7eb;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f4f6f8;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#taskList li span {
+    flex: 1;
+}
+
+#taskList li button {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#taskList li button:hover {
+    background-color: #b91c1c;
+}
+
+#taskInput:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+#addTaskBtn {
+    transition: background-color 0.3s ease;
+}
+
+#taskList li button,
+#clearAllBtn {
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    #addTaskBtn {
+        width: 100%;
+    }
+
+}
+
+#taskList li input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+}
